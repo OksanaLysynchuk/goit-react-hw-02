@@ -42,14 +42,13 @@ function App() {
   return (
     <div>
       <Description />
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <Options
-          updateFeedback={updateFeedback}
-          totalFeedback={totalFeedback}
-          resetFeedback={resetFeedback}
-        />
-        {totalFeedback > 0 && <button onClick={resetFeedback}>Reset</button>}
-      </div>
+
+      <Options
+        updateFeedback={updateFeedback}
+        totalFeedback={totalFeedback}
+        resetFeedback={resetFeedback}
+      />
+
       {totalFeedback > 0 && (
         <Feedback
           feedbackTypes={feedbackTypes}
